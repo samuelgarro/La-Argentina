@@ -1,0 +1,85 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+/*
+ * configuraciones generales
+ */
+* {
+	-fx-font-family: Tahoma;
+}
+
+/*
+ * clase para los botones
+ * pone el bton de color azul
+ * el texto en blanco
+ * el texto en negrita
+ */
+.btn {
+	-fx-background-color: transparent;
+	-fx-text-fill: white;
+	-fx-font-weight: bold;
+}
+/**
+ * clase para los botones de guardar
+ */
+.btn-secundary {
+	-fx-background-color: blue;
+	-fx-text-fill: white;
+	-fx-font-weight: bold;
+}
+/*
+ * evento hover de los botones, cambia de color
+ */
+.btn:hover, .btn-secundary:hover {
+	-fx-background-color: #00BFFF;
+}
+/**
+ * evento hove de boton de menu, cambia el color
+ */
+.btn-menu {
+	-fx-background-color: transparent; /* #011A54;*/
+	-fx-border-width: 0px;
+	-fx-text-fill: white;
+	-fx-pref-height: 60px;
+	-fx-pref-width: 120px;
+}
+
+.btn-menu:hover {
+	-fx-font-weight: bold;
+	-fx-cursor: hand;
+	/*-fx-effect: innershadow(three-pass-box, white, 10, 0.3, 1, 1); */
+	-fx-background-color: #009FFF;
+}
+
+.btn-sub-menu {
+	-fx-background-color: transparent;
+	-fx-border-width: 0px;
+	-fx-text-fill: white;
+	-fx-pref-height: 30px;
+	-fx-pref-width: 140px;
+}
+
+.btn-sub-menu:hover {
+	-fx-cursor: hand;
+	-fx-background-color: #009FFF;	
+	-fx-font-weight: bold;
+	-fx-pref-width: 150px;
+}
+/*
+ * color de fondo de barra de herramientas 
+ */
+ .toolbar {
+ 	-fx-background-color: linear-gradient(to right,#011A54, #050a28);
+ }
+
+.etiqueta {
+	-fx-text-fill: white;
+}
+
+.labelObligatorio {
+	-fx-text-fill: red;
+	-fx-font-weight: bold;
+	-fx-size: 13px;
+}
+ .sub-menu {
+ 	-fx-pref-width: 140;
+ 	-fx-background-color: #011A54;
+ }

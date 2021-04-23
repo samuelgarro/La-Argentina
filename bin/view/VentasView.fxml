@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import search.SearchComboBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="751.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VentasController">
+   <children>
+      <Label layoutX="25.0" layoutY="54.0" styleClass="etiqueta" stylesheets="@../mercado/application.css" text="Producto" />
+      <Label layoutX="355.0" layoutY="54.0" styleClass="etiqueta" stylesheets="@../mercado/application.css" text="Cantidad" />
+      <ComboBox fx:id="formaPago" layoutX="142.0" layoutY="10.0" prefHeight="25.0" prefWidth="200.0" />
+      <SearchComboBox fx:id="producto" layoutX="144.0" layoutY="50.0" onAction="#establecerMaximo" prefHeight="25.0" prefWidth="200.0" />
+      <Spinner fx:id="cantidad" layoutX="428.0" layoutY="50.0" prefHeight="25.0" prefWidth="200.0" />
+      <Button focusTraversable="false" layoutX="651.0" layoutY="50.0" mnemonicParsing="false" onAction="#agregarProducto" styleClass="btn-secundary" text="Agregar" />
+      <CheckBox fx:id="checkMayorista" layoutX="29.0" layoutY="98.0" mnemonicParsing="false" onAction="#cambiarPrecio" styleClass="etiqueta" text="Precio mayorista" />
+      <Button focusTraversable="false" layoutX="24.0" layoutY="129.0" mnemonicParsing="false" onAction="#quitarProducto" styleClass="btn-secundary" text="Quitar" />
+      <TableView fx:id="tabla" layoutX="20.0" layoutY="161.0" prefHeight="281.0" prefWidth="681.0">
+        <columns>
+          <TableColumn fx:id="colProducto" prefWidth="284.0" text="Producto" />
+          <TableColumn fx:id="colCantidad" prefWidth="124.0" text="Cantidad" />
+            <TableColumn fx:id="colPrecio" prefWidth="127.0" text="Precio unitario" />
+            <TableColumn fx:id="colSubTotal" prefWidth="118.0" text="Total" />
+        </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#quitarProducto" text="Quitar producto" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <Button fx:id="btnRegistrar" focusTraversable="false" layoutX="230.0" layoutY="515.0" mnemonicParsing="false" onAction="#registrar" prefHeight="25.0" prefWidth="150.0" styleClass="btn-secundary" text="Registrar" />
+      <Label layoutX="25.0" layoutY="14.0" styleClass="etiqueta" stylesheets="@../mercado/application.css" text="Forma de pago" />
+      <HBox fx:id="boxTotal" alignment="CENTER_LEFT" layoutX="392.0" layoutY="442.0" prefHeight="40.0" prefWidth="281.0" style="-fx-background-color: #011A54;">
+         <children>
+            <Separator prefHeight="0.0" prefWidth="20.0" visible="false" />
+            <Label prefHeight="18.0" prefWidth="59.0" style="-fx-font-weight: bold; -fx-font-size: 14px;" text="Total: " textFill="WHITE" />
+            <Separator prefHeight="0.0" prefWidth="20.0" visible="false" />
+            <Label fx:id="total" style="-fx-font-weight: bold; -fx-font-size: 14px;" text="\$ XXXX" textFill="WHITE" />
+         </children>
+      </HBox>
+      <Label fx:id="lblCliente" layoutX="362.0" layoutY="13.0" styleClass="etiqueta" text="Cliente" />
+      <SearchComboBox fx:id="comboCliente" layoutX="428.0" layoutY="8.0" prefHeight="23.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>

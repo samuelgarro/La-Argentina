@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="903.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PrincipalController">
+   <children>
+      <ToolBar fx:id="menu" prefHeight="80.0" prefWidth="903.0" styleClass="toolbar">
+        <items>
+          <Button fx:id="btnInventario" mnemonicParsing="false" onAction="#cambiarContenido" styleClass="btn-menu" text="Inventario" />
+            <Button fx:id="btnVentas" mnemonicParsing="false" onAction="#cambiarContenido" styleClass="btn-menu" text="Ventas" />
+            <Button fx:id="btnCompras" mnemonicParsing="false" onAction="#cambiarContenido" styleClass="btn-menu" text="Compras" />
+            <Button fx:id="btnCaja" mnemonicParsing="false" onAction="#cambiarContenido" styleClass="btn-menu" text="Caja" />
+            <Button fx:id="btnProveedores" mnemonicParsing="false" onAction="#cambiarContenido" styleClass="btn-menu" text="Proveedores" />
+            <Button fx:id="btnAjustes" mnemonicParsing="false" onAction="#cambiarContenido" styleClass="btn-menu" text="Ajustes" />
+            <Button fx:id="btnClientes" mnemonicParsing="false" onAction="#cambiarContenido" styleClass="btn-menu" text="Clientes" />
+        </items>
+      </ToolBar>
+      <Pane fx:id="contenido" layoutY="80.0" prefHeight="521.0" prefWidth="903.0" />
+   </children>
+</AnchorPane>

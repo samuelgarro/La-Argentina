@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="710.0" prefWidth="866.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProductoController">
+   <children>
+      <Label layoutX="20.0" layoutY="23.0" styleClass="etiqueta" text="Producto" />
+      <Label layoutX="20.0" layoutY="58.0" styleClass="etiqueta" text="Marca" />
+      <Label layoutX="357.0" layoutY="58.0" styleClass="etiqueta" text="Modelo" />
+      <Label layoutX="20.0" layoutY="128.0" styleClass="etiqueta" text="Precio al publico" />
+      <Label layoutX="357.0" layoutY="128.0" styleClass="etiqueta" text="Precio mayorista" />
+      <Label layoutX="20.0" layoutY="93.0" styleClass="etiqueta" text="Talle" />
+      <Label layoutX="20.0" layoutY="163.0" styleClass="etiqueta" text="Cantidad" />
+      <Label layoutX="357.0" layoutY="163.0" styleClass="etiqueta" text="Unidad" />
+      <TextField fx:id="producto" layoutX="137.0" layoutY="20.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextField fx:id="marca" layoutX="137.0" layoutY="55.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextField fx:id="modelo" layoutX="468.0" layoutY="55.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextField fx:id="talle" layoutX="137.0" layoutY="90.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextField fx:id="color" layoutX="468.0" layoutY="90.0" prefHeight="25.0" prefWidth="200.0" />
+      <Spinner fx:id="precio" editable="true" layoutX="137.0" layoutY="125.0" prefHeight="25.0" prefWidth="200.0" />
+      <Spinner fx:id="precioMayorista" editable="true" layoutX="468.0" layoutY="125.0" prefHeight="25.0" prefWidth="200.0" />
+      <Spinner fx:id="cantidad" editable="true" layoutX="137.0" layoutY="160.0" prefHeight="25.0" prefWidth="200.0" />
+      <ComboBox fx:id="unidad" layoutX="468.0" layoutY="160.0" prefHeight="25.0" prefWidth="200.0" />
+      <Button fx:id="btnGuardar" focusTraversable="false" layoutX="300.0" layoutY="509.0" mnemonicParsing="false" onAction="#guardarProducto" prefHeight="30.0" prefWidth="150.0" styleClass="btn-secundary" text="Guardar" />
+      <Label layoutX="357.0" layoutY="93.0" styleClass="etiqueta" text="Color" />
+      <Label layoutX="341.0" layoutY="27.0" styleClass="labelObligatorio" text="*" />
+      <Label layoutX="342.0" layoutY="126.0" styleClass="labelObligatorio" text="*" />
+      <Label layoutX="658.0" layoutY="125.0" styleClass="labelObligatorio" text="*" />
+      <Label layoutX="342.0" layoutY="162.0" styleClass="labelObligatorio" text="*" />
+      <ListView fx:id="rubrosSeleccionados" focusTraversable="false" layoutX="108.0" layoutY="274.0" prefHeight="200.0" prefWidth="200.0" />
+      <ListView fx:id="rubrosDisponibles" focusTraversable="false" layoutX="451.0" layoutY="274.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button fx:id="btnAgregar" focusTraversable="false" layoutX="333.0" layoutY="334.0" mnemonicParsing="false" onAction="#agregarRubro" prefWidth="90.0" styleClass="btn-secundary" text="&lt;&lt; Agregar" />
+      <Button fx:id="btnQuitar" focusTraversable="false" layoutX="333.0" layoutY="368.0" mnemonicParsing="false" onAction="#quitarRubro" prefHeight="25.0" prefWidth="90.0" styleClass="btn-secundary" text="Quitar &gt;&gt;" />
+      <Label layoutX="20.0" layoutY="198.0" styleClass="etiqueta" text="Stock minimo" />
+      <Label layoutX="357.0" layoutY="233.0" styleClass="etiqueta" text="Rubros disponibles:" />
+      <Label layoutX="20.0" layoutY="233.0" styleClass="etiqueta" text="Rubros seleccionados:" />
+      <Spinner fx:id="stockSegruridad" editable="true" layoutX="137.0" layoutY="195.0" prefHeight="25.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>

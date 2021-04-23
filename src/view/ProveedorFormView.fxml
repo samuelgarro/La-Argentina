@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="593.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProveedoresAMController">
+   <children>
+      <Label layoutX="20.0" layoutY="40.0" styleClass="etiqueta" text="Razón social" />
+      <Label layoutX="20.0" layoutY="75.0" styleClass="etiqueta" text="Telefono" />
+      <Label layoutX="20.0" layoutY="110.0" styleClass="etiqueta" text="Correo" />
+      <Label layoutX="20.0" layoutY="145.0" styleClass="etiqueta" text="Dirección" />
+      <TextField fx:id="txtRazonSocial" layoutX="130.0" layoutY="35.0" prefWidth="200.0" />
+      <TextField fx:id="txtTelefono" layoutX="130.0" layoutY="70.0" prefWidth="200.0" />
+      <TextField fx:id="txtCorreo" layoutX="130.0" layoutY="105.0" prefWidth="200.0" />
+      <TextField fx:id="txtDireccion" layoutX="130.0" layoutY="140.0" prefWidth="200.0" />
+      <Button fx:id="btnGuardar" focusTraversable="false" layoutX="250.0" layoutY="219.0" mnemonicParsing="false" onAction="#registrar" styleClass="btn-secundary" text="Guardar" />
+      <Label layoutX="339.0" layoutY="39.0" styleClass="labelObligatorio" text="*" />
+   </children>
+</AnchorPane>

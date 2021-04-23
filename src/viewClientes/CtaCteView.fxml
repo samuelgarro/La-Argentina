@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1153.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CtaCteController">
+   <children>
+      <TableView fx:id="tablaCtaCte" layoutX="20.0" layoutY="50.0" prefHeight="481.0" prefWidth="500.0">
+        <columns>
+          <TableColumn fx:id="colCliente" editable="false" prefWidth="350.0" resizable="false" text="Cliente" />
+          <TableColumn fx:id="colMontoCtaCte" editable="false" prefWidth="150.0" resizable="false" text="Monto " />
+        </columns>
+      </TableView>
+      <TableView fx:id="tablaHistorial" layoutX="550.0" layoutY="50.0" prefHeight="481.0" prefWidth="450.0">
+        <columns>
+          <TableColumn fx:id="colFecha" editable="false" prefWidth="150.0" resizable="false" text="Fecha operación" />
+          <TableColumn fx:id="colMontoMovimiento" editable="false" prefWidth="150.0" resizable="false" text="Monto" />
+            <TableColumn fx:id="colOperación" editable="false" prefWidth="150.0" resizable="false" text="Operación" />
+        </columns>
+      </TableView>
+      <Label focusTraversable="false" layoutX="171.0" layoutY="22.0" text="Cuenta corriente de clientes" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label focusTraversable="false" layoutX="735.0" layoutY="22.0" text="Movimientos" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <VBox layoutX="20.0" layoutY="558.0" prefHeight="170.0" prefWidth="500.0">
+         <children>
+            <HBox prefHeight="60.0" prefWidth="500.0" style="-fx-background-color: #011A54;">
+               <children>
+                  <Label focusTraversable="false" text="Cliente:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Separator focusTraversable="false" prefWidth="50.0" visible="false" />
+                  <Label fx:id="lblCliente" focusTraversable="false" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="60.0" prefWidth="500.0" style="-fx-background-color: #011A54;">
+               <children>
+                  <Label focusTraversable="false" text="Dirección:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Separator focusTraversable="false" prefWidth="50.0" visible="false" />
+                  <Label fx:id="lblDireccion" focusTraversable="false" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="500.0">
+               <children>
+                  <Button fx:id="btnEditar" contentDisplay="CENTER" focusTraversable="false" mnemonicParsing="false" onAction="#editarCliente" styleClass="btn" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Button fx:id="btnAsentarPago" focusTraversable="false" layoutX="1031.0" layoutY="87.0" mnemonicParsing="false" onAction="#asentarPago" styleClass="btn" text="Asentar pago" />
+   </children>
+</Pane>
